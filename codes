@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -6,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>O TÁTICO FINANCEIRO | Independência Financeira & Estratégia</title>
 <!-- Tailwind CSS -->
-<script src="https://www.google.com/url?q=https://cdn.tailwindcss.com&source=gmail&ust=1792682623455000&sa=E"></script>
+<script src="https://www.google.com/url?q=https://cdn.tailwindcss.com&source=gmail&ust=1792682874872000&sa=E"></script>
 <!-- Chart.js -->
-<script src="https://www.google.com/url?q=https://cdn.jsdelivr.net/npm/chart.js&source=gmail&ust=1792682623455000&sa=E"></script>
+<script src="https://www.google.com/url?q=https://cdn.jsdelivr.net/npm/chart.js&source=gmail&ust=1792682874872000&sa=E"></script>
 <!-- Google Fonts -->
-<link href="https://www.google.com/url?q=https://fonts.googleapis.com/css2?family%3DInter:wght@300;400;600;700;900%26display%3Dswap&source=gmail&ust=1792682623455000&sa=E" rel="stylesheet">
+<link href="https://www.google.com/url?q=https://fonts.googleapis.com/css2?family%3DInter:wght@300;400;600;700;900%26display%3Dswap&source=gmail&ust=1792682874872000&sa=E" rel="stylesheet">
 <style>
 body { font-family: 'Inter', sans-serif; }
 </style>
@@ -163,17 +162,17 @@ Calcular Tática
 <h3 class="text-xl font-bold text-white flex items-center gap-2">
 <span>📋 Plano de Treino desta Semana</span>
 </h3>
-<div class="space-y-3">
+<div class="space-y-3" id="checklistContainer">
 <label class="flex items-center gap-3 bg-slate-950 p-3.5 rounded-lg border border-slate-800 cursor-pointer hover:border-slate-700 transition-colors">
-<input type="checkbox" class="w-4 h-4 accent-emerald-500 rounded">
+<input type="checkbox" class="checklist-item w-4 h-4 accent-emerald-500 rounded" data-index="0">
 <span class="text-sm text-slate-300">Analisar o extrato bancário do último mês e identificar fugas de capital.</span>
 </label>
 <label class="flex items-center gap-3 bg-slate-950 p-3.5 rounded-lg border border-slate-800 cursor-pointer hover:border-slate-700 transition-colors">
-<input type="checkbox" class="w-4 h-4 accent-emerald-500 rounded">
+<input type="checkbox" class="checklist-item w-4 h-4 accent-emerald-500 rounded" data-index="1">
 <span class="text-sm text-slate-300">Configurar transferência automática no dia do salário para a corretora.</span>
 </label>
 <label class="flex items-center gap-3 bg-slate-950 p-3.5 rounded-lg border border-slate-800 cursor-pointer hover:border-slate-700 transition-colors">
-<input type="checkbox" class="w-4 h-4 accent-emerald-500 rounded">
+<input type="checkbox" class="checklist-item w-4 h-4 accent-emerald-500 rounded" data-index="2">
 <span class="text-sm text-slate-300">Reforçar posição num ETF Global (DCA).</span>
 </label>
 </div>
@@ -245,9 +244,9 @@ Praticante de desporto, fã de disciplina tática e investidor focado na liberda
 <div class="bg-gradient-to-br from-emerald-950/40 to-slate-900 border border-emerald-500/20 rounded-2xl p-6 space-y-4">
 <h4 class="text-lg font-bold text-white">Recebe as Táticas Semanalmente</h4>
 <p class="text-xs text-slate-400">Junta-te a outros investidores e recebe análises estratégicas na tua caixa de entrada.</p>
-<form class="space-y-3" onsubmit="event.preventDefault(); alert('Inscrição efetuada com sucesso!');">
-<input type="email" placeholder="O teu email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:border-emerald-500">
-<button class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm py-2 rounded-lg transition-colors">
+<form class="space-y-3" onsubmit="subscreverNewsletter(event)">
+<input type="email" id="emailNewsletter" placeholder="O teu email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:border-emerald-500">
+<button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm py-2 rounded-lg transition-colors">
 Subscrever
 </button>
 </form>
@@ -255,6 +254,11 @@ Subscrever
 
 </aside>
 
+</div>
+
+<!-- Notificação Flutuante -->
+<div id="toastNotification" class="fixed bottom-5 right-5 bg-emerald-500 text-slate-950 px-4 py-3 rounded-xl shadow-lg font-bold text-sm transition-all duration-300 transform translate-y-20 opacity-0 z-50">
+Ação efetuada com sucesso!
 </div>
 
 <!-- Footer -->
@@ -267,9 +271,9 @@ Subscrever
 
 <!-- Scripts da Página -->
 <script>
-// Inicializar Gráfico
+// Inicializar Gráfico Dinâmico
 const ctx = document.getElementById('fireChart').getContext('2d');
-new Chart(ctx, {
+let fireChart = new Chart(ctx, {
 type: 'line',
 data: {
 labels: ['Ano 1', 'Ano 3', 'Ano 5', 'Ano 8', 'Ano 10', 'Ano 15'],
@@ -293,7 +297,7 @@ y: { grid: { color: '#1e293b' }, ticks: { color: '#64748b' } }
 }
 });
 
-// Lógica da Calculadora
+// Lógica da Calculadora FIRE & Atualização Dinâmica do Gráfico
 function calcularFIRE() {
 const despesas = parseFloat(document.getElementById('despesasMensais').value) || 0;
 const investimento = parseFloat(document.getElementById('investimentoMensal').value) || 0;
@@ -301,44 +305,114 @@ const investimento = parseFloat(document.getElementById('investimentoMensal').va
 const fireGoal = despesas * 12 * 25;
 document.getElementById('fireNumber').innerText = fireGoal.toLocaleString('pt-PT') + ' €';
 
+let anosTotal = 22;
 if(investimento > 0) {
 let montante = 0;
 let meses = 0;
 const taxaMensal = 0.07 / 12;
+let dadosGrafico = [];
+let anosLabels = [];
 
-while (montante < fireGoal && meses < 600) { // limite 50 anos
+while (montante < fireGoal && meses < 600) {
 montante = (montante + investimento) * (1 + taxaMensal);
 meses++;
+if (meses % 12 === 0) {
+let anoAtual = meses / 12;
+if (anoAtual <= 25 && (anoAtual <= 5 || anoAtual % 2 === 0)) {
+anosLabels.push(`Ano ${anoAtual}`);
+dadosGrafico.push(Math.round(montante));
+}
+}
 }
 
-const anos = Math.round(meses / 12);
-document.getElementById('fireYears').innerText = `~ ${anos} anos`;
+anosTotal = Math.round(meses / 12);
+document.getElementById('fireYears').innerText = `~ ${anosTotal} anos`;
+
+// Atualizar dados do gráfico dinamicamente
+if(dadosGrafico.length > 0) {
+fireChart.data.labels = anosLabels;
+fireChart.data.datasets[0].data = dadosGrafico;
+fireChart.update();
+}
 } else {
 document.getElementById('fireYears').innerText = 'N/D';
 }
+mostrarToast("Calculadora tática atualizada com sucesso!");
 }
 
-// Adicionar Comentário
+// Sistema de Toast / Notificações
+function mostrarToast(mensagem) {
+const toast = document.getElementById('toastNotification');
+toast.innerText = mensagem;
+toast.classList.remove('translate-y-20', 'opacity-0');
+setTimeout(() => {
+toast.classList.add('translate-y-20', 'opacity-0');
+}, 3000);
+}
+
+// Carregar e Guardar Estado do Checklist (localStorage)
+document.addEventListener('DOMContentLoaded', () => {
+const checkboxes = document.querySelectorAll('.checklist-item');
+checkboxes.forEach((cb, index) => {
+const salvo = localStorage.getItem(`checklist_${index}`);
+if (salvo === 'true') cb.checked = true;
+
+cb.addEventListener('change', (e) => {
+localStorage.setItem(`checklist_${index}`, e.target.checked);
+mostrarToast("Plano de treino atualizado!");
+});
+});
+
+// Carregar comentários guardados
+carregarComentariosLocalStorage();
+});
+
+// Adicionar Comentário com Persistência
 function adicionarComentario(event) {
 event.preventDefault();
 const autor = document.getElementById('autor').value;
 const texto = document.getElementById('comentarioTexto').value;
 
+const novoComentarioObj = { autor, texto, data: 'Agora mesmo' };
+
+// Salvar no localStorage
+let comentariosSalvos = JSON.parse(localStorage.getItem('comentarios_tatico') || '[]');
+comentariosSalvos.unshift(novoComentarioObj);
+localStorage.setItem('comentarios_tatico', JSON.stringify(comentariosSalvos));
+
+renderizarComentarioHTML(autor, texto, 'Agora mesmo');
+document.getElementById('autor').value = '';
+document.getElementById('comentarioTexto').value = '';
+mostrarToast("Comentário publicado no balneário!");
+}
+
+function renderizarComentarioHTML(autor, texto, data) {
 const novoComentario = document.createElement('div');
 novoComentario.className = "bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2";
 novoComentario.innerHTML = `
 <div class="flex justify-between items-center">
 <span class="font-bold text-sm text-emerald-400">${autor}</span>
-<span class="text-xs text-slate-500">Agora mesmo</span>
+<span class="text-xs text-slate-500">${data}</span>
 </div>
 <p class="text-sm text-slate-300">${texto}</p>
 `;
-
 document.getElementById('listaComentarios').prepend(novoComentario);
-document.getElementById('autor').value = '';
-document.getElementById('comentarioTexto').value = '';
+}
+
+function carregarComentariosLocalStorage() {
+let comentariosSalvos = JSON.parse(localStorage.getItem('comentarios_tatico') || '[]');
+comentariosSalvos.forEach(c => {
+renderizarComentarioHTML(c.autor, c.texto, c.data);
+});
+}
+
+// Subscrever Newsletter
+function subscreverNewsletter(event) {
+event.preventDefault();
+document.getElementById('emailNewsletter').value = '';
+mostrarToast("Inscrição efetuada com sucesso!");
 }
 </script>
 </body>
 </html>
-```
+
