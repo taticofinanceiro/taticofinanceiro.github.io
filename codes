@@ -1,111 +1,344 @@
+```html
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O TÁTICO FINANCEIRO | Independência Financeira & Estratégia</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O TÁTICO FINANCEIRO | Independência Financeira & Estratégia</title>
+<!-- Tailwind CSS -->
+<script src="https://www.google.com/url?q=https://cdn.tailwindcss.com&source=gmail&ust=1792682623455000&sa=E"></script>
+<!-- Chart.js -->
+<script src="https://www.google.com/url?q=https://cdn.jsdelivr.net/npm/chart.js&source=gmail&ust=1792682623455000&sa=E"></script>
+<!-- Google Fonts -->
+<link href="https://www.google.com/url?q=https://fonts.googleapis.com/css2?family%3DInter:wght@300;400;600;700;900%26display%3Dswap&source=gmail&ust=1792682623455000&sa=E" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+</style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
 
-    <!-- Header / Navbar -->
-    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="bg-emerald-500 text-slate-950 font-black p-2 rounded-lg text-xl tracking-tighter">
-                    OT
-                </div>
-                <div>
-                    <h1 class="text-xl font-black tracking-wider text-white uppercase leading-none">O Tático</h1>
-                    <span class="text-xs font-semibold text-emerald-400 tracking-widest uppercase">Financeiro</span>
-                </div>
-            </div>
-            <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-400">
-                <a href="#artigo" class="hover:text-emerald-400 transition-colors">Artigo</a>
-                <a href="#calculadora" class="hover:text-emerald-400 transition-colors">Calculadora FIRE</a>
-                <a href="#plano-acao" class="hover:text-emerald-400 transition-colors">Plano de Treino</a>
-                <a href="#comentarios" class="hover:text-emerald-400 transition-colors">Comentários</a>
-            </nav>
-            <div class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs px-3 py-1.5 rounded-full font-mono">
-                Estratégia FIRE
-            </div>
-        </div>
-    </header>
+<!-- Header / Navbar -->
+<header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+<div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="bg-emerald-500 text-slate-950 font-black p-2 rounded-lg text-xl tracking-tighter">
+OT
+</div>
+<div>
+<h1 class="text-xl font-black tracking-wider text-white uppercase leading-none">O Tático</h1>
+<span class="text-xs font-semibold text-emerald-400 tracking-widest uppercase">Financeiro</span>
+</div>
+</div>
+<nav class="hidden md:flex gap-6 text-sm font-medium text-slate-400">
+<a href="#artigo" class="hover:text-emerald-400 transition-colors">Artigo</a>
+<a href="#calculadora" class="hover:text-emerald-400 transition-colors">Calculadora FIRE</a>
+<a href="#plano-acao" class="hover:text-emerald-400 transition-colors">Plano de Treino</a>
+<a href="#comentarios" class="hover:text-emerald-400 transition-colors">Comentários</a>
+</nav>
+<div class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs px-3 py-1.5 rounded-full font-mono">
+Estratégia FIRE
+</div>
+</div>
+</header>
 
-    <!-- Hero / Main Layout -->
-    <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
+<!-- Hero / Main Layout -->
+<div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-        <!-- Conteúdo Principal -->
-        <main class="lg:col-span-2 space-y-12" id="artigo">
+<!-- Conteúdo Principal -->
+<main class="lg:col-span-2 space-y-12" id="artigo">
 
-            <!-- Artigo -->
-            <article class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6">
-               
-                <div class="space-y-3">
-                    <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
-                        <span>🏆 Estratégia & Desporto</span>
-                        <span>•</span>
-                        <span>⏱ 5 Min de Leitura</span>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
-                        A Estratégia dos Campeões: Como Tratar o Teu Dinheiro Como uma Época Desportiva
-                    </h2>
-                    <div class="flex items-center gap-3 pt-2">
-                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500 flex items-center justify-center font-bold text-emerald-400 text-sm">
-                            TS
-                        </div>
-                        <div>
-                            <p class="text-sm font-bold text-slate-200">Por Tiago Silva ("O Tático")</p>
-                            <p class="text-xs text-slate-400">Engenheiro & Investidor FIRE</p>
-                        </div>
-                    </div>
-                </div>
+<!-- Artigo -->
+<article class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6">
 
-                <div class="p-4 bg-slate-800/50 border-l-4 border-emerald-500 rounded-r-lg italic text-slate-300 text-sm md:text-base">
-                    "Disciplina, desporto e alocação tática de capital para alcançar a independência financeira."
-                </div>
+<div class="space-y-3">
+<div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+<span>🏆 Estratégia & Desporto</span>
+<span>•</span>
+<span>⏱ 5 Min de Leitura</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+A Estratégia dos Campeões: Como Tratar o Teu Dinheiro Como uma Época Desportiva
+</h2>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500 flex items-center justify-center font-bold text-emerald-400 text-sm">
+TS
+</div>
+<div>
+<p class="text-sm font-bold text-slate-200">Por Tiago Silva ("O Tático")</p>
+<p class="text-xs text-slate-400">Engenheiro & Investidor FIRE</p>
+</div>
+</div>
+</div>
 
-                <!-- Gráfico Tático -->
-                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Performance acumulada vs. Consistência de treino</h4>
-                    <canvas id="fireChart" class="w-full max-h-64"></canvas>
-                </div>
+<div class="p-4 bg-slate-800/50 border-l-4 border-emerald-500 rounded-r-lg italic text-slate-300 text-sm md:text-base">
+"Disciplina, desporto e alocação tática de capital para alcançar a independência financeira."
+</div>
 
-                <!-- Texto do Artigo -->
-                <div class="space-y-4 text-slate-300 leading-relaxed text-base md:text-lg">
-                    <p>
-                        Se há coisa que o desporto nos ensina, é que <strong class="text-white">ninguém ganha um campeonato por sorte</strong>. Ninguém entra em campo à espera que o resultado caia do céu, e os grandes atletas não constroem carreiras de sucesso a viver do improviso.
-                    </p>
-                    <p>
-                        No entanto, quando olhamos para as finanças pessoais, a maioria das pessoas joga à defesa e sem tática: recebe o salário, paga as contas, gasta o resto e espera que a reforma corra bem. Se o teu objetivo é alcançar a <strong class="text-emerald-400">Independência Financeira (FIRE)</strong>, tens de mudar a tua tática de jogo.
-                    </p>
+<!-- Gráfico Tático -->
+<div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+<h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Performance acumulada vs. Consistência de treino</h4>
+<canvas id="fireChart" class="w-full max-h-64"></canvas>
+</div>
 
-                    <h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
-                        <span>1. O Pré-Época: O Teu Fundo de Emergência</span>
-                    </h3>
-                    <p class="text-sm md:text-base">
-                        Nenhuma equipa entra na liga sem fazer pré-época e sem garantir que os jogadores estão em forma. Nas tuas finanças, a tua preparação física é o teu Fundo de Emergência: entre 3 a 6 meses de despesas num produto sem risco e com liquidez imediata. É a tua proteção contra lesões inesperadas.
-                    </p>
+<!-- Texto do Artigo -->
+<div class="space-y-4 text-slate-300 leading-relaxed text-base md:text-lg">
+<p>
+Se há coisa que o desporto nos ensina, é que <strong class="text-white">ninguém ganha um campeonato por sorte</strong>. Ninguém entra em campo à espera que o resultado caia do céu, e os grandes atletas não constroem carreiras de sucesso a viver do improviso.
+</p>
+<p>
+No entanto, quando olhamos para as finanças pessoais, a maioria das pessoas joga à defesa e sem tática: recebe o salário, paga as contas, gasta o resto e espera que a reforma corra bem. Se o teu objetivo é alcançar a <strong class="text-emerald-400">Independência Financeira (FIRE)</strong>, tens de mudar a tua tática de jogo.
+</p>
 
-                    <h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
-                        <span>2. A Defesa: Taxa de Poupança Sólida</span>
-                    </h3>
-                    <p class="text-sm md:text-base">
-                        Para ganhar campeonatos, é preciso não sofrer golos idiotas. Corta nos créditos ao consumo, automatiza a tua poupança assim que recebes o salário e foca-te numa taxa de poupança ambiciosa (30% a 50%).
-                    </p>
+<h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
+<span>1. O Pré-Época: O Teu Fundo de Emergência</span>
+</h3>
+<p class="text-sm md:text-base">
+Nenhuma equipa entra na liga sem fazer pré-época e sem garantir que os jogadores estão em forma. Nas tuas finanças, a tua preparação física é o teu Fundo de Emergência: entre 3 a 6 meses de despesas num produto sem risco e com liquidez imediata. É a tua proteção contra lesões inesperadas.
+</p>
 
-                    <h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
-                        <span>3. O Ataque: ETFs Globais e Juro Composto</span>
-                    </h3>
-                    <p class="text-sm md:text-base">
-                        Com a defesa assegurada, é hora de ir para o ataque. Investir mensalmente num ETF mundial diversificado (como MSCI
+<h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
+<span>2. A Defesa: Taxa de Poupança Sólida</span>
+</h3>
+<p class="text-sm md:text-base">
+Para ganhar campeonatos, é preciso não sofrer golos idiotas. Corta nos créditos ao consumo, automatiza a tua poupança assim que recebes o salário e foca-te numa taxa de poupança ambiciosa (30% a 50%).
+</p>
 
- 
+<h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
+<span>3. O Ataque: ETFs Globais e Juro Composto</span>
+</h3>
+<p class="text-sm md:text-base">
+Com a defesa assegurada, é hora de ir para o ataque. Investir mensalmente num ETF mundial diversificado (como MSCI World ou S&P 500) via DCA (Dollar-Cost Averaging) coloca os maiores ativos do mundo a jogar na tua equipa 24 horas por dia.
+</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+<span class="bg-slate-800 text-slate-300 text-xs font-medium px-3 py-1 rounded-md">#FIRE</span>
+<span class="bg-slate-800 text-slate-300 text-xs font-medium px-3 py-1 rounded-md">#Investimentos</span>
+<span class="bg-slate-800 text-slate-300 text-xs font-medium px-3 py-1 rounded-md">#ETFs</span>
+<span class="bg-slate-800 text-slate-300 text-xs font-medium px-3 py-1 rounded-md">#MentalidadeDesportiva</span>
+</div>
+</article>
+
+<!-- Calculadora FIRE Interativa -->
+<section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6" id="calculadora">
+<div class="space-y-1">
+<h3 class="text-2xl font-bold text-white flex items-center gap-2">
+<span>🧮 Calculadora Tática FIRE</span>
+</h3>
+<p class="text-sm text-slate-400">Calcula o teu número de Independência Financeira baseado nas tuas despesas anuais.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-950 p-6 rounded-xl border border-slate-800">
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Despesas Mensais (€)</label>
+<input type="number" id="despesasMensais" value="1200" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500 font-mono">
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Investimento Mensal (€)</label>
+<input type="number" id="investimentoMensal" value="500" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500 font-mono">
+</div>
+<button onclick="calcularFIRE()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 rounded-lg transition-colors">
+Calcular Tática
+</button>
+</div>
+
+<div class="flex flex-col justify-between bg-slate-900 p-4 rounded-lg border border-slate-800 space-y-4">
+<div>
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Objectivo FIRE (Regra dos 4%)</span>
+<div class="text-2xl md:text-3xl font-black text-emerald-400 font-mono mt-1" id="fireNumber">360.000 €</div>
+<p class="text-xs text-slate-500 mt-1">Montante necessário para viver dos rendimentos.</p>
+</div>
+<div class="border-t border-slate-800 pt-3">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Tempo Estimado (7% Retorno)</span>
+<div class="text-xl font-bold text-white font-mono mt-1" id="fireYears">~ 22 anos</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Checkbox Interactive Checklist -->
+<section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4" id="plano-acao">
+<h3 class="text-xl font-bold text-white flex items-center gap-2">
+<span>📋 Plano de Treino desta Semana</span>
+</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 bg-slate-950 p-3.5 rounded-lg border border-slate-800 cursor-pointer hover:border-slate-700 transition-colors">
+<input type="checkbox" class="w-4 h-4 accent-emerald-500 rounded">
+<span class="text-sm text-slate-300">Analisar o extrato bancário do último mês e identificar fugas de capital.</span>
+</label>
+<label class="flex items-center gap-3 bg-slate-950 p-3.5 rounded-lg border border-slate-800 cursor-pointer hover:border-slate-700 transition-colors">
+<input type="checkbox" class="w-4 h-4 accent-emerald-500 rounded">
+<span class="text-sm text-slate-300">Configurar transferência automática no dia do salário para a corretora.</span>
+</label>
+<label class="flex items-center gap-3 bg-slate-950 p-3.5 rounded-lg border border-slate-800 cursor-pointer hover:border-slate-700 transition-colors">
+<input type="checkbox" class="w-4 h-4 accent-emerald-500 rounded">
+<span class="text-sm text-slate-300">Reforçar posição num ETF Global (DCA).</span>
+</label>
+</div>
+</section>
+
+<!-- Comentários -->
+<section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6" id="comentarios">
+<h3 class="text-xl font-bold text-white">💬 Balneário (Comentários)</h3>
+
+<form class="space-y-4" onsubmit="adicionarComentario(event)">
+<div>
+<input type="text" id="autor" placeholder="O teu nome ou alcunha" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-emerald-500">
+</div>
+<div>
+<textarea id="comentarioTexto" rows="3" placeholder="Qual é a tua tática para este mês?" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-emerald-500"></textarea>
+</div>
+<button type="submit" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors border border-slate-700">
+Publicar Comentário
+</button>
+</form>
+
+<div class="space-y-4 pt-4 border-t border-slate-800" id="listaComentarios">
+<div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+<div class="flex justify-between items-center">
+<span class="font-bold text-sm text-emerald-400">Marco_Invest</span>
+<span class="text-xs text-slate-500">Há 2 horas</span>
+</div>
+<p class="text-sm text-slate-300">Excelente analogia desportiva! Comecei este mês a reforçar o VWCE e a manter o foco no longo prazo.</p>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Sidebar / Lateral -->
+<aside class="space-y-6">
+
+<!-- Bio Autor -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+<h4 class="text-xs font-bold uppercase tracking-wider text-emerald-400">Sobre o Autor</h4>
+<div class="space-y-2">
+<h5 class="text-lg font-bold text-white">Tiago Silva</h5>
+<p class="text-xs text-slate-400 leading-relaxed">
+Praticante de desporto, fã de disciplina tática e investidor focado na liberdade financeira. Partilho o meu percurso com total transparência.
+</p>
+</div>
+</div>
+
+<!-- Stats Rápidas -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+<h4 class="text-xs font-bold uppercase tracking-wider text-emerald-400">A Minha Tática Atual</h4>
+<div class="space-y-3 font-mono text-sm">
+<div class="flex justify-between text-slate-300">
+<span>Taxa Poupança:</span>
+<span class="font-bold text-white">45%</span>
+</div>
+<div class="flex justify-between text-slate-300">
+<span>Alocação ETFs:</span>
+<span class="font-bold text-white">85%</span>
+</div>
+<div class="flex justify-between text-slate-300">
+<span>Fundo Emergência:</span>
+<span class="font-bold text-emerald-400">6 Meses</span>
+</div>
+</div>
+</div>
+
+<!-- Newsletter -->
+<div class="bg-gradient-to-br from-emerald-950/40 to-slate-900 border border-emerald-500/20 rounded-2xl p-6 space-y-4">
+<h4 class="text-lg font-bold text-white">Recebe as Táticas Semanalmente</h4>
+<p class="text-xs text-slate-400">Junta-te a outros investidores e recebe análises estratégicas na tua caixa de entrada.</p>
+<form class="space-y-3" onsubmit="event.preventDefault(); alert('Inscrição efetuada com sucesso!');">
+<input type="email" placeholder="O teu email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:border-emerald-500">
+<button class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm py-2 rounded-lg transition-colors">
+Subscrever
+</button>
+</form>
+</div>
+
+</aside>
+
+</div>
+
+<!-- Footer -->
+<footer class="border-t border-slate-800 mt-12 py-8 bg-slate-900/50">
+<div class="max-w-6xl mx-auto px-4 text-center text-xs text-slate-500 space-y-2">
+<p>© 2026 O Tático Financeiro. Conteúdo com fins meramente informativos e educacionais.</p>
+<p>Independência Financeira • Desporto • Estratégia de Investimento</p>
+</div>
+</footer>
+
+<!-- Scripts da Página -->
+<script>
+// Inicializar Gráfico
+const ctx = document.getElementById('fireChart').getContext('2d');
+new Chart(ctx, {
+type: 'line',
+data: {
+labels: ['Ano 1', 'Ano 3', 'Ano 5', 'Ano 8', 'Ano 10', 'Ano 15'],
+datasets: [{
+label: 'Património Acumulado (€)',
+data: [6000, 21000, 42000, 85000, 130000, 280000],
+borderColor: '#10b981',
+backgroundColor: 'rgba(16, 185, 129, 0.1)',
+fill: true,
+tension: 0.4,
+borderWidth: 3
+}]
+},
+options: {
+responsive: true,
+plugins: { legend: { display: false } },
+scales: {
+x: { grid: { color: '#1e293b' }, ticks: { color: '#64748b' } },
+y: { grid: { color: '#1e293b' }, ticks: { color: '#64748b' } }
+}
+}
+});
+
+// Lógica da Calculadora
+function calcularFIRE() {
+const despesas = parseFloat(document.getElementById('despesasMensais').value) || 0;
+const investimento = parseFloat(document.getElementById('investimentoMensal').value) || 0;
+
+const fireGoal = despesas * 12 * 25;
+document.getElementById('fireNumber').innerText = fireGoal.toLocaleString('pt-PT') + ' €';
+
+if(investimento > 0) {
+let montante = 0;
+let meses = 0;
+const taxaMensal = 0.07 / 12;
+
+while (montante < fireGoal && meses < 600) { // limite 50 anos
+montante = (montante + investimento) * (1 + taxaMensal);
+meses++;
+}
+
+const anos = Math.round(meses / 12);
+document.getElementById('fireYears').innerText = `~ ${anos} anos`;
+} else {
+document.getElementById('fireYears').innerText = 'N/D';
+}
+}
+
+// Adicionar Comentário
+function adicionarComentario(event) {
+event.preventDefault();
+const autor = document.getElementById('autor').value;
+const texto = document.getElementById('comentarioTexto').value;
+
+const novoComentario = document.createElement('div');
+novoComentario.className = "bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2";
+novoComentario.innerHTML = `
+<div class="flex justify-between items-center">
+<span class="font-bold text-sm text-emerald-400">${autor}</span>
+<span class="text-xs text-slate-500">Agora mesmo</span>
+</div>
+<p class="text-sm text-slate-300">${texto}</p>
+`;
+
+document.getElementById('listaComentarios').prepend(novoComentario);
+document.getElementById('autor').value = '';
+document.getElementById('comentarioTexto').value = '';
+}
+</script>
+</body>
+</html>
+```
