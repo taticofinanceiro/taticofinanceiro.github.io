@@ -1,467 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
-<head><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Como Organizar as Finanças do Dia a Dia em 2026: Método 50/30/20 na Prática</title>
-<!-- Meta Description: Aprende a organizar as tuas finanças em 2026 com o método 50/30/20. Guia prático com tabela, exemplos para quem vive no Porto, livros, ferramentas e planilha grátis para download. -->
-<style>
-    .financas-container {
-        max-width: 800px;
-        margin: 0 auto;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        line-height: 1.7;
-        color: #2d3748;
-        padding: 16px;
-    }
-    .financas-container h1 {
-        font-size: 2.25rem;
-        line-height: 1.2;
-        color: #1a202c;
-        margin-bottom: 24px;
-        font-weight: 800;
-    }
-    .financas-container h2 {
-        font-size: 1.75rem;
-        color: #1a365d;
-        margin-top: 48px;
-        margin-bottom: 16px;
-        font-weight: 700;
-        border-left: 4px solid #3182ce;
-        padding-left: 16px;
-    }
-    .financas-container h3 {
-        font-size: 1.375rem;
-        color: #2c5282;
-        margin-top: 32px;
-        margin-bottom: 12px;
-        font-weight: 600;
-    }
-    .financas-container p {
-        margin-bottom: 16px;
-        font-size: 1.0625rem;
-    }
-    .financas-container ul, .financas-container ol {
-        margin-bottom: 24px;
-        padding-left: 24px;
-    }
-    .financas-container li {
-        margin-bottom: 8px;
-        font-size: 1.0625rem;
-    }
-    .financas-container strong {
-        color: #1a202c;
-        font-weight: 600;
-    }
-    .financas-container a {
-        color: #3182ce;
-        text-decoration: none;
-        font-weight: 600;
-    }
-    .financas-container a:hover {
-        text-decoration: underline;
-    }
-    .intro-box {
-        background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 32px;
-        border: 1px solid #90cdf4;
-    }
-    .table-container {
-        overflow-x: auto;
-        margin: 24px 0;
-    }
-    .financas-table {
-        width: 100%;
-        border-collapse: collapse;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        min-width: 500px;
-    }
-    .financas-table th {
-        background: #2b6cb0;
-        color: white;
-        padding: 16px;
-        text-align: left;
-        font-weight: 600;
-    }
-    .financas-table td {
-        padding: 16px;
-        border-bottom: 1px solid #e2e8f0;
-    }
-    .financas-table tr:last-child td {
-        border-bottom: none;
-    }
-    .financas-table tr:nth-child(even) {
-        background: #f7fafc;
-    }
-    .destaque {
-        background: #fefcbf;
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-weight: 600;
-    }
-    .card-livro {
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 20px;
-        background: #ffffff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card-livro:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-    }
-    .card-ferramenta {
-        display: flex;
-        gap: 16px;
-        align-items: flex-start;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 16px;
-        background: #f8fafc;
-    }
-    .card-ferramenta-icon {
-        background: #3182ce;
-        color: white;
-        width: 48px;
-        height: 48px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        font-size: 24px;
-        font-weight: 700;
-    }
-    .cta-box {
-        background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
-        color: white;
-        padding: 32px;
-        border-radius: 16px;
-        text-align: center;
-        margin: 48px 0;
-        box-shadow: 0 10px 25px rgba(43, 108, 176, 0.3);
-    }
-    .cta-box h3 {
-        color: white;
-        margin-top: 0;
-        font-size: 1.5rem;
-    }
-    .cta-button {
-        display: inline-block;
-        background: #f6ad55;
-        color: #1a202c !important;
-        padding: 16px 32px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 1.125rem;
-        text-decoration: none !important;
-        margin-top: 16px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 14px rgba(246, 173, 85, 0.4);
-    }
-    .cta-button:hover {
-        background: #ed8936;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(246, 173, 85, 0.5);
-    }
-    .faq-item {
-        border-bottom: 1px solid #e2e8f0;
-        padding: 20px 0;
-    }
-    .faq-item:last-child {
-        border-bottom: none;
-    }
-    .alerta-porto {
-        background: #fff5f5;
-        border-left: 4px solid #f56565;
-        padding: 16px;
-        border-radius: 0 8px 8px 0;
-        margin: 24px 0;
-    }
-    .nota {
-        font-size: 0.875rem;
-        color: #718096;
-        font-style: italic;
-    }
-    @media (max-width: 390px) {
-        .financas-container h1 { font-size: 1.75rem; }
-        .financas-container h2 { font-size: 1.5rem; }
-        .financas-container h3 { font-size: 1.25rem; }
-        .card-ferramenta { flex-direction: column; }
-        .cta-box { padding: 24px 16px; }
-        .cta-button { padding: 14px 20px; font-size: 1rem; }
-    }
-</style>
-
-<!-- FAQ Schema Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "O método 50/30/20 funciona com salário mínimo em Portugal?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Sim, mas pode precisar de adaptação. Com o salário mínimo de 2026 em Portugal, os 50% para necessidades podem não cobrir tudo, especialmente no Porto. Neste caso, tenta 60/20/20 ou 70/20/10 temporariamente, enquanto cortas despesas fixas como rendas altas ou transportes."
-    }
-  }, {
-    "@type": "Question",
-    "name": "Como calculo os 50/30/20? É sobre o salário bruto ou líquido?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Usa sempre o teu rendimento líquido mensal, ou seja, o valor que cai na conta depois dos descontos para IRS e Segurança Social. Inclui também subsídios de férias e Natal divididos por 12 se quiseres uma média anual."
-    }
-  }, {
-    "@type": "Question",
-    "name": "Onde entram as prestações do crédito habitação no método?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "A prestação da casa é considerada uma necessidade e entra nos 50%. Se a tua prestação + despesas essenciais ultrapassar os 50%, precisas rever o orçamento ou negociar o crédito. Amortizações extraordinárias entram nos 20% de poupança/investimento."
-    }
-  }, {
-    "@type": "Question",
-    "name": "Posso usar o método se tenho rendimento irregular?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Sim. Calcula uma média dos últimos 6-12 meses para definir o teu 'salário base'. Nos meses mais altos, separa mais para poupança para compensar os meses fracos. Um fundo de emergência é ainda mais crítico nestes casos."
-    }
-  }, {
-    "@type": "Question",
-    "name": "E se eu viver no Porto e a renda comer mais de 50%?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Infelizmente é comum no Porto em 2026. Tens 3 opções: 1) Aumentar rendimento com part-time ou freelancing, 2) Reduzir as outras necessidades e ajustar para 60/20/20 temporariamente, 3) Ponderar mudar para zonas mais acessíveis como Gondomar, Gaia ou Maia. A regra não é rígida, é um guia."
-    }
-  }]
-}
-</script>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O TÁTICO FINANCEIRO | Independência Financeira & Estratégia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-<div class="financas-container">
-    <h1>Como Organizar as Finanças do Dia a Dia em 2026: Método 50/30/20 na Prática</h1>
-   
-    <div class="intro-box">
-        <p><strong>Se o teu dinheiro desaparece antes do fim do mês e sentes que vives de ordenado em ordenado, não estás sozinho.</strong> Com o custo de vida no Porto a subir e os salários a não acompanhar, organizar as finanças deixou de ser opcional. Neste guia, vais aprender o método 50/30/20 passo a passo, com exemplos reais para 2026 e adaptados à realidade portuense.</p>
-    </div>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
 
-    <h2>O Que é o Método 50/30/20 e Por Que Funciona em 2026?</h2>
-    <p>O método 50/30/20 foi popularizado pela senadora americana Elizabeth Warren no livro <em>All Your Worth</em>. A ideia é simples: dividir o teu rendimento líquido mensal em 3 categorias.</p>
-    <p>Em 2026, com a inflação nos serviços, rendas no Grande Porto a rondar os 900€ por um T1 e a taxa Euribor ainda instável, ter uma regra clara ajuda a evitar decisões por impulso e dá-te controlo sem precisar de folhas de Excel complexas.</p>
-
-    <h3>As 3 categorias explicadas:</h3>
-    <ul>
-        <li><strong>50% - Necessidades:</strong> Tudo o que precisas para sobreviver. Se não pagares, tens consequências graves.</li>
-        <li><strong>30% - Desejos:</strong> Estilo de vida. Podes cortar se for preciso, mas tornam a vida melhor.</li>
-        <li><strong>20% - Poupança e Dívidas:</strong> O teu futuro. Fundo de emergência, investimentos, PPR e pagamento extra de créditos.</li>
-    </ul>
-
-    <h2>Tabela Prática do Método 50/30/20</h2>
-    <p>Vê como fica a divisão para diferentes rendimentos líquidos mensais em Portugal:</p>
-   
-    <div class="table-container">
-        <table class="financas-table">
-            <thead>
-                <tr>
-                    <th>Rendimento Líquido</th>
-                    <th>50% Necessidades</th>
-                    <th>30% Desejos</th>
-                    <th>20% Poupança</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>900€</strong> <span class="nota">Salário mínimo 2026*</span></td>
-                    <td>450€</td>
-                    <td>270€</td>
-                    <td>180€</td>
-                </tr>
-                <tr>
-                    <td><strong>1200€</strong></td>
-                    <td>600€</td>
-                    <td>360€</td>
-                    <td>240€</td>
-                </tr>
-                <tr>
-                    <td><strong>1600€</strong></td>
-                    <td>800€</td>
-                    <td>480€</td>
-                    <td>320€</td>
-                </tr>
-                <tr>
-                    <td><strong>2000€</strong></td>
-                    <td>1000€</td>
-                    <td>600€</td>
-                    <td>400€</td>
-                </tr>
-                <tr>
-                    <td><strong>3000€</strong></td>
-                    <td>1500€</td>
-                    <td>900€</td>
-                    <td>600€</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <p class="nota">*Valor estimado do salário mínimo para 2026. Confirma o valor oficial no início do ano.</p>
-
-    <h2>Como Aplicar o 50/30/20 a Viver no Porto: Passo a Passo</h2>
-   
-    <h3>1. Calcula o teu rendimento líquido real</h3>
-    <p>Soma tudo o que entra: salário, recibos verdes, subsídios. <span class="destaque">Usa sempre o valor líquido</span>. Se recebes subsídios de férias e Natal, divide por 12 e adiciona à média mensal para não teres surpresas.</p>
-
-    <h3>2. Lista TODAS as tuas despesas do último mês</h3>
-    <p>Vai ao homebanking e exporta o extrato. Classifica cada gasto:</p>
-    <ul>
-        <li><strong>Necessidades 50%:</strong> Renda/crédito habitação, condomínio, água, luz, gás, passe Andante, supermercado base, seguros obrigatórios, creche, medicamentos crónicos.</li>
-        <li><strong>Desejos 30%:</strong> Jantares fora, Netflix/HBO, ginásio, roupa não essencial, viagens, take-away, Super Bock no café, bilhetes para o Dragão.</li>
-        <li><strong>Poupança 20%:</strong> Transferência para conta poupança, PPR, Certificados do Tesouro, ETFs, pagamento extra do cartão de crédito ou crédito pessoal.</li>
-    </ul>
-
-    <div class="alerta-porto">
-        <p><strong>Atenção, Portuense:</strong> Se vives sozinho no Porto, a renda facilmente come 50-60% de um salário de 1200€. Neste caso, o método precisa de adaptação. Ou aumentas o rendimento, ou cortas desejos, ou consideras dividir casa. Não ignores a matemática. A regra pode passar a 60/30/10 enquanto estabilizas.</p>
-    </div>
-
-    <h3>3. Ajusta e automatiza</h3>
-    <p>A beleza do método está na automação. No dia em que recebes:</p>
-    <ol>
-        <li>Paga primeiro as necessidades fixas.</li>
-        <li>Transfere automaticamente os 20% para outra conta assim que o ordenado cair. "Paga-te a ti primeiro".</li>
-        <li>Vive com os 30% restantes para os desejos sem culpa.</li>
-    </ol>
-
-    <h2>3 Erros Comuns ao Usar o 50/30/20 em Portugal</h2>
-    <ul>
-        <li><strong>Confundir necessidades com desejos:</strong> O pacote de TV com 200 canais não é necessidade. O telemóvel topo de gama também não. Necessidade é a versão mais barata que resolve o problema.</li>
-        <li><strong>Esquecer despesas anuais:</strong> IMI, seguro do carro, IUC, presentes de Natal. Divide por 12 e mete nos 50% como "provisão mensal" ou tira dos 20% se for poupança.</li>
-        <li><strong>Desistir porque não bate certo ao cêntimo:</strong> O 50/30/20 é um guia, não uma lei. Se no Porto só consegues 55/25/20, já é uma vitória. O importante é ter consciência e direção.</li>
-    </ul>
-
-    <h2>Livros Essenciais para Dominar as Finanças Pessoais</h2>
-    <p>Estes livros mudaram a forma como milhares de portugueses olham para o dinheiro. Ideais para aprofundar o que vais aprender com o 50/30/20:</p>
-
-    <div class="card-livro">
-        <h3>1. "O Dinheiro e a Lei da Atração" - Esther e Jerry Hicks</h3>
-        <p>Embora não seja técnico, ajuda a mudar o teu mindset sobre escassez e abundância. Essencial antes de pegares nos números.</p>
-        <p><a href="[LINK_AFILIADO_LIVRO_1]" target="_blank" rel="nofollow sponsored">Ver preço na Amazon →</a></p>
-    </div>
-
-    <div class="card-livro">
-        <h3>2. "Pai Rico, Pai Pobre" - Robert Kiyosaki</h3>
-        <p>O clássico que explica a diferença entre ativos e passivos. Ajuda-te a perceber porque poupar 20% não chega: tens de investir.</p>
-        <p><a href="[LINK_AFILIADO_LIVRO_2]" target="_blank" rel="nofollow sponsored">Ver preço na Amazon →</a></p>
-    </div>
-
-    <div class="card-livro">
-        <h3>3. "O Homem Mais Rico da Babilónia" - George S. Clason</h3>
-        <p>Princípios financeiros milenares em histórias simples. A regra "guarda 10% de tudo o que ganhas" é a base dos teus 20%.</p>
-        <p><a href="[LINK_AFILIADO_LIVRO_3]" target="_blank" rel="nofollow sponsored">Ver preço na Amazon →</a></p>
-    </div>
-
-    <h2>Kit de Ferramentas para Começar Hoje</h2>
-    <p>Não precisas complicar. Com estas 3 ferramentas já estás a 90% do caminho:</p>
-
-    <div class="card-ferramenta">
-        <div class="card-ferramenta-icon">1</div>
-        <div>
-            <h3>Conta Poupança Automática</h3>
-            <p>Abre uma conta sem custos de manutenção num banco digital como Moey!, ActivoBank ou Revolut. Agenda uma transferência automática para o dia a seguir ao ordenado. O dinheiro que não vês, não gastas.</p>
-            <p><a href="[LINK_AFILIADO_BANCO_DIGITAL]" target="_blank" rel="nofollow sponsored">Abrir conta grátis →</a></p>
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-emerald-500 text-slate-950 font-black p-2 rounded-lg text-xl tracking-tighter">
+                    OT
+                </div>
+                <div>
+                    <h1 class="text-xl font-black tracking-wider text-white uppercase leading-none">O Tático</h1>
+                    <span class="text-xs font-semibold text-emerald-400 tracking-widest uppercase">Financeiro</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-400">
+                <a href="#artigo" class="hover:text-emerald-400 transition-colors">Artigo</a>
+                <a href="#calculadora" class="hover:text-emerald-400 transition-colors">Calculadora FIRE</a>
+                <a href="#plano-acao" class="hover:text-emerald-400 transition-colors">Plano de Treino</a>
+                <a href="#comentarios" class="hover:text-emerald-400 transition-colors">Comentários</a>
+            </nav>
+            <div class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs px-3 py-1.5 rounded-full font-mono">
+                Estratégia FIRE
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="card-ferramenta">
-        <div class="card-ferramenta-icon">2</div>
-        <div>
-            <h3>App de Controlo de Despesas: Toshl ou Boonzi</h3>
-            <p>Liga ao teu banco e categoriza automaticamente. Ao fim de 30 dias já sabes para onde foi cada euro. O Boonzi é português e tem categorias adaptadas ao IRS.</p>
-            <p><a href="[LINK_AFILIADO_APP_FINANCAS]" target="_blank" rel="nofollow sponsored">Testar Boonzi grátis →</a></p>
-        </div>
-    </div>
+    <!-- Hero / Main Layout -->
+    <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-    <div class="card-ferramenta">
-        <div class="card-ferramenta-icon">3</div>
-        <div>
-            <h3>Planilha 50/30/20 Editável</h3>
-            <p>Se preferes Excel/Google Sheets, criei uma planilha já com as fórmulas e categorias em português de Portugal. É só colocar os valores e ela diz-te se estás dentro do método.</p>
-            <p><a href="#download-planilha">Descarregar mais abaixo ↓</a></p>
-        </div>
-    </div>
+        <!-- Conteúdo Principal -->
+        <main class="lg:col-span-2 space-y-12" id="artigo">
 
-    <div class="cta-box" id="download-planilha">
-        <h3>Planilha 50/30/20 Grátis para 2026</h3>
-        <p>Recebe no teu email a planilha Excel/Google Sheets já configurada para Portugal, com categorias de IRS, exemplo para o Porto e gráficos automáticos.</p>
-        <p>Bónus: Guia PDF "7 Despesas Invisíveis que Destroem o teu Orçamento no Porto".</p>
-        <!-- TROCAR O LINK ABAIXO PELO TEU FORM/MAILCHIMP/CONVERTKIT -->
-        <a href="[LINK_EMAIL_PLANILHA]?email=SEU_EMAIL_AQUI" class="cta-button">Quero Receber a Planilha Grátis</a>
-        <p style="font-size: 0.875rem; margin-top: 16px; opacity: 0.9;">Sem spam. Cancelas quando quiseres.</p>
-    </div>
+            <!-- Artigo -->
+            <article class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6">
+               
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+                        <span>🏆 Estratégia & Desporto</span>
+                        <span>•</span>
+                        <span>⏱ 5 Min de Leitura</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                        A Estratégia dos Campeões: Como Tratar o Teu Dinheiro Como uma Época Desportiva
+                    </h2>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500 flex items-center justify-center font-bold text-emerald-400 text-sm">
+                            TS
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-200">Por Tiago Silva ("O Tático")</p>
+                            <p class="text-xs text-slate-400">Engenheiro & Investidor FIRE</p>
+                        </div>
+                    </div>
+                </div>
 
-    <h2>Perguntas Frequentes sobre o Método 50/30/20</h2>
-   
-    <div class="faq-item">
-        <h3>O método 50/30/20 funciona com salário mínimo em Portugal?</h3>
-        <p>Sim, mas pode precisar de adaptação. Com o salário mínimo de 2026, os 50% para necessidades podem não cobrir tudo, especialmente no Porto. Neste caso, tenta 60/20/20 ou 70/20/10 temporariamente, enquanto cortas despesas fixas como rendas altas ou transportes.</p>
-    </div>
+                <div class="p-4 bg-slate-800/50 border-l-4 border-emerald-500 rounded-r-lg italic text-slate-300 text-sm md:text-base">
+                    "Disciplina, desporto e alocação tática de capital para alcançar a independência financeira."
+                </div>
 
-    <div class="faq-item">
-        <h3>Como calculo os 50/30/20? É sobre o salário bruto ou líquido?</h3>
-        <p>Usa sempre o teu rendimento líquido mensal, ou seja, o valor que cai na conta depois dos descontos para IRS e Segurança Social. Inclui também subsídios de férias e Natal divididos por 12 se quiseres uma média anual.</p>
-    </div>
+                <!-- Gráfico Tático -->
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Performance acumulada vs. Consistência de treino</h4>
+                    <canvas id="fireChart" class="w-full max-h-64"></canvas>
+                </div>
 
-    <div class="faq-item">
-        <h3>Onde entram as prestações do crédito habitação no método?</h3>
-        <p>A prestação da casa é considerada uma necessidade e entra nos 50%. Se a tua prestação + despesas essenciais ultrapassar os 50%, precisas rever o orçamento ou negociar o crédito. Amortizações extraordinárias entram nos 20% de poupança/investimento.</p>
-    </div>
+                <!-- Texto do Artigo -->
+                <div class="space-y-4 text-slate-300 leading-relaxed text-base md:text-lg">
+                    <p>
+                        Se há coisa que o desporto nos ensina, é que <strong class="text-white">ninguém ganha um campeonato por sorte</strong>. Ninguém entra em campo à espera que o resultado caia do céu, e os grandes atletas não constroem carreiras de sucesso a viver do improviso.
+                    </p>
+                    <p>
+                        No entanto, quando olhamos para as finanças pessoais, a maioria das pessoas joga à defesa e sem tática: recebe o salário, paga as contas, gasta o resto e espera que a reforma corra bem. Se o teu objetivo é alcançar a <strong class="text-emerald-400">Independência Financeira (FIRE)</strong>, tens de mudar a tua tática de jogo.
+                    </p>
 
-    <div class="faq-item">
-        <h3>Posso usar o método se tenho rendimento irregular?</h3>
-        <p>Sim. Calcula uma média dos últimos 6-12 meses para definir o teu "salário base". Nos meses mais altos, separa mais para poupança para compensar os meses fracos. Um fundo de emergência é ainda mais crítico nestes casos.</p>
-    </div>
+                    <h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
+                        <span>1. O Pré-Época: O Teu Fundo de Emergência</span>
+                    </h3>
+                    <p class="text-sm md:text-base">
+                        Nenhuma equipa entra na liga sem fazer pré-época e sem garantir que os jogadores estão em forma. Nas tuas finanças, a tua preparação física é o teu Fundo de Emergência: entre 3 a 6 meses de despesas num produto sem risco e com liquidez imediata. É a tua proteção contra lesões inesperadas.
+                    </p>
 
-    <div class="faq-item">
-        <h3>E se eu viver no Porto e a renda comer mais de 50%?</h3>
-        <p>Infelizmente é comum no Porto em 2026. Tens 3 opções: 1) Aumentar rendimento com part-time ou freelancing, 2) Reduzir as outras necessidades e ajustar para 60/20/20 temporariamente, 3) Ponderar mudar para zonas mais acessíveis como Gondomar, Gaia ou Maia. A regra não é rígida, é um guia.</p>
-    </div>
+                    <h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
+                        <span>2. A Defesa: Taxa de Poupança Sólida</span>
+                    </h3>
+                    <p class="text-sm md:text-base">
+                        Para ganhar campeonatos, é preciso não sofrer golos idiotas. Corta nos créditos ao consumo, automatiza a tua poupança assim que recebes o salário e foca-te numa taxa de poupança ambiciosa (30% a 50%).
+                    </p>
 
-    <h2>Conclusão: Começa com o que Tens Hoje</h2>
-    <p>O método 50/30/20 não vai fazer-te rico amanhã. Mas em 2026, com tanta incerteza económica, dar um nome a cada euro que ganhas é o primeiro passo para sair do ciclo de ansiedade financeira.</p>
-    <p>Não esperes pelo salário perfeito ou pelo mês perfeito. Abre a tua app do banco agora, faz as contas para o mês passado e vê a tua percentagem real. A partir daí, é só ajustar 1% de cada vez.</p>
-    <p><strong>O melhor orçamento é aquele que consegues cumprir.</strong> E no Porto, com uma francesinha ou um café no Piolho pelo meio, o objetivo não é deixar de viver. É garantir que podes continuar a viver bem daqui a 10 anos.</p>
-   
-    <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0;" class="nota">
-        <strong>Disclaimer:</strong> Este artigo tem fins educativos e não constitui aconselhamento financeiro personalizado. Para tratamento adequado de questões financeiras, considera consultar um profissional certificado. Valores do Porto referentes a outubro 2025, projecões para 2026.
-    </p>
-</div>
-<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
-</html> 
+                    <h3 class="text-xl font-bold text-white pt-4 flex items-center gap-2">
+                        <span>3. O Ataque: ETFs Globais e Juro Composto</span>
+                    </h3>
+                    <p class="text-sm md:text-base">
+                        Com a defesa assegurada, é hora de ir para o ataque. Investir mensalmente num ETF mundial diversificado (como MSCI
+
+ 
